@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.489
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VetisDB", "VetisDB\VetisDB.csproj", "{50B3BCD0-5C94-4B7E-B248-AD7AA9ACF01D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VetisDB", "VetisDB\VetisDBGitHub.csproj", "{50B3BCD0-5C94-4B7E-B248-AD7AA9ACF01D}"
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "VetisSQL", "VetisSQL\VetisSQL.sqlproj", "{23706C35-CC77-4E47-8C38-26922BC9245C}"
 EndProject

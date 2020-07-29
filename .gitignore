@@ -259,3 +259,7 @@ paket-files/
 # Python Tools for Visual Studio (PTVS)
 __pycache__/
 *.pyc
+/VetisDB/App.Debug.config
+/VetisDB/App.Release.config
+/VetisDB.sln
+/VetisDB/VetisDB.csproj

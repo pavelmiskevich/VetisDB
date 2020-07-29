@@ -5,7 +5,7 @@ http://help.vetrf.ru/wiki/GetActivityLocationList_v2.0
 GetProductItemList v2.0
 http://help.vetrf.ru/wiki/GetProductItemList_v2.0
 
-Œ¡ÕŒ¬À≈Õ»≈
+–û–ë–ù–û–í–õ–ï–ù–ò–ï
 GetBusinessEntityChangesList
 http://help.vetrf.ru/wiki/GetBusinessEntityChangesList_v2.0
 GetRussianEnterpriseChangesList v2.0
