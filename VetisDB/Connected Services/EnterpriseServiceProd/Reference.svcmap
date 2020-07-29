@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="6f209fe2-489e-4424-9dbd-5c2df688e5a1" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://api.vetrf.ru/schema/platform/services/2.1-RC-last/EnterpriseService_v2.1_production.wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="EnterpriseService.wsdl" MetadataType="Wsdl" ID="eb3ac611-e344-4a3a-aad8-a711ac4e42ea" SourceId="1" SourceUrl="http://api.vetrf.ru/schema/platform/services/2.1-RC-last/EnterpriseService_v2.1_production.wsdl" />
+    <MetadataFile FileName="registry_ws_definitions_v2.xsd" MetadataType="Schema" ID="5978824e-dc3e-4c90-8c08-91aba729ada5" SourceId="1" SourceUrl="http://api.vetrf.ru/schema/platform/services/2.1-RC-last/registry_ws_definitions_v2.1.xsd" />
+    <MetadataFile FileName="dictionary_v2.xsd" MetadataType="Schema" ID="e20c7847-ce41-49d9-adb2-a524be8f1539" SourceId="1" SourceUrl="http://api.vetrf.ru/schema/platform/services/2.1-RC-last/dictionary_v2.1.xsd" />
+    <MetadataFile FileName="base_ws_definitions_v2.xsd" MetadataType="Schema" ID="4e4006f5-d088-408b-a946-97a47517f176" SourceId="1" SourceUrl="http://api.vetrf.ru/schema/platform/services/2.1-RC-last/base_ws_definitions_v2.0.xsd" />
+    <MetadataFile FileName="base_v2.xsd" MetadataType="Schema" ID="aad7d36b-f664-4749-ae42-e1bb55c25446" SourceId="1" SourceUrl="http://api.vetrf.ru/schema/platform/services/2.1-RC-last/base_v2.0.xsd" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

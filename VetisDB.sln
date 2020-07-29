@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.489
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VetisDB", "VetisDB\VetisDB.csproj", "{50B3BCD0-5C94-4B7E-B248-AD7AA9ACF01D}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "VetisSQL", "VetisSQL\VetisSQL.sqlproj", "{23706C35-CC77-4E47-8C38-26922BC9245C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{50B3BCD0-5C94-4B7E-B248-AD7AA9ACF01D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50B3BCD0-5C94-4B7E-B248-AD7AA9ACF01D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50B3BCD0-5C94-4B7E-B248-AD7AA9ACF01D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50B3BCD0-5C94-4B7E-B248-AD7AA9ACF01D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23706C35-CC77-4E47-8C38-26922BC9245C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23706C35-CC77-4E47-8C38-26922BC9245C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23706C35-CC77-4E47-8C38-26922BC9245C}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{23706C35-CC77-4E47-8C38-26922BC9245C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23706C35-CC77-4E47-8C38-26922BC9245C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23706C35-CC77-4E47-8C38-26922BC9245C}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {87379F26-0E66-4D4C-BA99-1C72A655B86F}
+	EndGlobalSection
+EndGlobal

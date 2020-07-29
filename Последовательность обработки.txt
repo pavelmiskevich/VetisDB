@@ -1,0 +1,14 @@
+GetBusinessEntityList 
+http://help.vetrf.ru/wiki/GetBusinessEntityList_v2.0
+GetActivityLocationList v2.0
+http://help.vetrf.ru/wiki/GetActivityLocationList_v2.0
+GetProductItemList v2.0
+http://help.vetrf.ru/wiki/GetProductItemList_v2.0
+
+намнбкемхе
+GetBusinessEntityChangesList
+http://help.vetrf.ru/wiki/GetBusinessEntityChangesList_v2.0
+GetRussianEnterpriseChangesList v2.0
+http://help.vetrf.ru/wiki/GetRussianEnterpriseChangesList_v2.0
+GetProductItemChangesList v2.0
+http://help.vetrf.ru/wiki/GetProductItemChangesList_v2.0
