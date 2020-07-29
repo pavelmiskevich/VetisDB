@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using VetisDB.Classes.Services;
 using VetisDB.EnterpriseServiceProd;
 
@@ -13,6 +14,11 @@ namespace VetisDB
 {
     class Program
     {
+        private static int _count = 1000;
+        private static int _offset = 0;
+        private static long _total = 0;
+        private static readonly string lostTime = "Затраченное время";
+
         static void Main(string[] args)
         {
             GetBusinessEntities();
@@ -30,8 +36,8 @@ namespace VetisDB
 
             getBusinessEntityListRequest.listOptions = new ListOptions
             {
-                count = "1000",
-                offset = "0"
+                count = _count.ToString(),
+                offset = _offset.ToString()
             };
 
             try
@@ -44,10 +50,32 @@ namespace VetisDB
                 ////ParallelQuery<int>
 
                 //DataTable dtTmp = students.ToDataTable();
-                
                 getBusinessEntityListResponse = soap.GetBusinessEntityList(getBusinessEntityListRequest);
+                _total = getBusinessEntityListResponse.businessEntityList.total;
                 DataTable dtTmp = getBusinessEntityListResponse.businessEntityList.businessEntity.ToDataTable();
-                int i = BusinessEntityInsertUDT(dtTmp);
+                int c = BusinessEntityInsertUdt(dtTmp);
+                for (int j = _count; j < _total + _count; j += _count)
+                {
+                    getBusinessEntityListRequest.listOptions = new ListOptions
+                    {
+                        count = _count.ToString(),
+                        offset = j.ToString() //_offset.ToString()
+                    };
+                    Console.WriteLine($"{_count} {j}");
+                    var watch = System.Diagnostics.Stopwatch.StartNew();
+                    getBusinessEntityListResponse = soap.GetBusinessEntityList(getBusinessEntityListRequest);
+                    watch.Stop();
+                    Console.WriteLine($"GET {lostTime} : {watch.ElapsedMilliseconds}");
+                    watch = System.Diagnostics.Stopwatch.StartNew();
+                    dtTmp = getBusinessEntityListResponse.businessEntityList.businessEntity.ToDataTable();
+                    watch.Stop();
+                    Console.WriteLine($"ToDataTable() {lostTime} : {watch.ElapsedMilliseconds}");
+                    watch = System.Diagnostics.Stopwatch.StartNew();
+                    c = BusinessEntityInsertUdt(dtTmp);
+                    watch.Stop();
+                    Console.WriteLine($"BusinessEntityInsertUdt(dtTmp) {lostTime} : {watch.ElapsedMilliseconds}");
+                }
+                //getBusinessEntityListResponse.businessEntityList.total //2931499
             }
             catch (Exception ex)
             {
@@ -60,7 +88,7 @@ namespace VetisDB
         /// </summary>
         /// <param name="dt">business entity data table</param>
         /// <returns>affected rows count</returns>
-        public static int BusinessEntityInsertUDT(DataTable dt)
+        static int BusinessEntityInsertUdt(DataTable dt)
         {
             int count = 0;
             //SqlConnection sqlConnection = new SqlConnection(Const.cs);
@@ -88,7 +116,7 @@ namespace VetisDB
                     catch (Exception ex)
                     {
                         //Указанный тип не зарегистрирован на сервере назначения
-                        //Проверить типы в DataTable
+                        //TODO: Проверить типы в DataTable
                         Console.WriteLine("{0} Exception caught.", ex);
                     }
                 }
